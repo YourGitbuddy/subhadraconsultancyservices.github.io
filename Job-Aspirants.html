@@ -780,70 +780,29 @@ Get in touch for career guidance and job opportunities
 
 </div>
 
-<form 
-class="contact-form"
-action="https://formsubmit.co/subhadraconsultancy.services@gmail.com"
-method="POST"
->
+<form action="https://formsubmit.co/subhadraconsultancy.services@gmail.com" method="POST">
 
 <input type="hidden" name="_captcha" value="false">
 
 <input type="hidden" name="_template" value="table">
 
-<input type="hidden" name="_subject" value="New Business Enquiry - Subhadra Consultancy">
+<input type="hidden" name="_subject" value="New Business Enquiry">
 
-<input type="hidden" name="_next" value="https://subhadraconsultancy.in">
+<input type="text" name="company" placeholder="Company Name" required>
 
-<input 
-type="text" 
-name="Company Name" 
-placeholder="Company Name"
-required
->
+<input type="email" name="email" placeholder="Work Email" required>
 
-<input 
-type="email" 
-name="Work Email" 
-placeholder="Work Email"
-required
->
+<input type="text" name="mobile" placeholder="Mobile Number" required>
 
-<input 
-type="text" 
-name="Mobile Number" 
-placeholder="Mobile Number"
-required
->
-
-<select name="Requirement">
-
-<option value="">
-Select Requirement
-</option>
-
-<option>
-Permanent Hiring
-</option>
-
-<option>
-Contract Staffing
-</option>
-
-<option>
-Bulk Hiring
-</option>
-
-<option>
-Executive Search
-</option>
-
+<select name="requirement" required>
+<option value="">Select Requirement</option>
+<option>Permanent Hiring</option>
+<option>Contract Staffing</option>
+<option>Bulk Hiring</option>
+<option>Executive Search</option>
 </select>
 
-<textarea 
-name="Hiring Requirement"
-placeholder="Tell us about your hiring requirement"
-required
-></textarea>
+<textarea name="message" placeholder="Tell us about your hiring requirement" required></textarea>
 
 <button type="submit">
 Submit Enquiry
