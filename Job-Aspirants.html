@@ -781,48 +781,95 @@ Get in touch for career guidance and job opportunities
 </div>
 
 <form 
-action="https://formsubmit.co/subhadraconsultancy.services@gmail.com" 
+class="contact-form"
+action="https://formsubmit.co/subhadraconsultancy.services@gmail.com"
 method="POST"
-class="grid gap-6">
+>
 
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_subject" value="New Inquiry - Subhadra Consultancy Services">
-<input type="hidden" name="_template" value="table">
+<!-- Hidden Settings -->
 
-<input
-type="text"
-name="name"
-placeholder="Your Name"
+<input 
+type="hidden" 
+name="_captcha" 
+value="false"
+>
+
+<input 
+type="hidden" 
+name="_subject" 
+value="New Business Enquiry"
+>
+
+<input 
+type="hidden" 
+name="_next" 
+value="https://subhadraconsultancy.in"
+>
+
+<!-- Company Name -->
+
+<input 
+type="text" 
+name="company" 
+placeholder="Company Name" 
 required
-class="input-field bg-white border border-gray-300">
+>
 
-<input
-type="email"
-name="email"
-placeholder="Your Email"
+<!-- Work Email -->
+
+<input 
+type="email" 
+name="email" 
+placeholder="Work Email" 
 required
-class="input-field bg-white border border-gray-300">
+>
 
-<input
-type="tel"
-name="phone"
-placeholder="Your Mobile Number"
+<!-- Mobile -->
+
+<input 
+type="text" 
+name="mobile" 
+placeholder="Mobile Number" 
 required
-class="input-field bg-white border border-gray-300">
+>
 
-<textarea
-rows="6"
-name="message"
-placeholder="Tell us about your requirement..."
-required
-class="input-field bg-white border border-gray-300"></textarea>
+<!-- Requirement -->
 
-<button
-type="submit"
-class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-4 rounded-2xl font-semibold hover:scale-105 shadow-lg">
+<select name="requirement">
 
-Send Message
+<option>
+Select Requirement
+</option>
 
+<option>
+Permanent Hiring
+</option>
+
+<option>
+Contract Staffing
+</option>
+
+<option>
+Bulk Hiring
+</option>
+
+<option>
+Executive Search
+</option>
+
+</select>
+
+<!-- Message -->
+
+<textarea 
+name="message" 
+placeholder="Tell us about your hiring requirement"
+></textarea>
+
+<!-- Button -->
+
+<button type="submit">
+Submit Enquiry
 </button>
 
 </form>
