@@ -395,17 +395,44 @@ Looking for recruitment or staffing support? Connect with our team today.
 </div>
 </div>
 
-<form class="contact-form">
+<form 
+class="contact-form"
+action="https://formsubmit.co/subhadraconsultancy.services@gmail.com"
+method="POST"
+>
 
-<input type="text" placeholder="Company Name">
+<input type="hidden" name="_captcha" value="false">
 
-<input type="email" placeholder="Work Email">
+<input type="hidden" name="_template" value="table">
 
-<input type="text" placeholder="Mobile Number">
+<input type="hidden" name="_subject" value="New Business Enquiry - Subhadra Consultancy">
 
-<select>
+<input type="hidden" name="_next" value="https://subhadraconsultancy.in">
 
-<option>
+<input 
+type="text" 
+name="Company Name" 
+placeholder="Company Name"
+required
+>
+
+<input 
+type="email" 
+name="Work Email" 
+placeholder="Work Email"
+required
+>
+
+<input 
+type="text" 
+name="Mobile Number" 
+placeholder="Mobile Number"
+required
+>
+
+<select name="Requirement">
+
+<option value="">
 Select Requirement
 </option>
 
@@ -427,7 +454,11 @@ Executive Search
 
 </select>
 
-<textarea placeholder="Tell us about your hiring requirement"></textarea>
+<textarea 
+name="Hiring Requirement"
+placeholder="Tell us about your hiring requirement"
+required
+></textarea>
 
 <button type="submit">
 Submit Enquiry
