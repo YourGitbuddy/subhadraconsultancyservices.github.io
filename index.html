@@ -2552,34 +2552,19 @@
 
   <div class="contact-form-wrapper">
 
-    <!-- =========================================
-         WEB3FORMS CONTACT FORM
-    ========================================= -->
-
     <form 
+      id="contactForm"
       action="https://api.web3forms.com/submit"
       method="POST"
       class="contact-form"
     >
 
-      <!-- =========================================
-           WEB3FORMS ACCESS KEY
-      ========================================= -->
-
-      <!-- 
-        Replace YOUR_ACCESS_KEY_HERE 
-        with your real Web3Forms key
-      -->
-
+      <!-- WEB3FORMS KEY -->
       <input
         type="hidden"
         name="access_key"
         value="YOUR_ACCESS_KEY_HERE"
       >
-
-      <!-- =========================================
-           EMAIL SUBJECT
-      ========================================= -->
 
       <input
         type="hidden"
@@ -2587,92 +2572,52 @@
         value="New Business Enquiry - Subhadra Consultancy"
       >
 
-      <!-- =========================================
-           SUCCESS REDIRECT
-      ========================================= -->
-
-      <input
-        type="hidden"
-        name="redirect"
-        value="https://subhadraconsultancy.in"
-      >
-
-      <!-- =========================================
-           FIRST ROW
-      ========================================= -->
-
+      <!-- COMPANY -->
       <div class="form-row">
 
-        <!-- COMPANY NAME -->
         <div class="form-group">
-
-          <label for="company">
-            Company Name *
-          </label>
+          <label>Company Name *</label>
 
           <input
             type="text"
-            id="company"
             name="Company Name"
             placeholder="Your company name"
             required
           >
-
         </div>
 
-        <!-- WORK EMAIL -->
         <div class="form-group">
-
-          <label for="email">
-            Work Email *
-          </label>
+          <label>Work Email *</label>
 
           <input
             type="email"
-            id="email"
             name="Work Email"
             placeholder="you@company.com"
             required
           >
-
         </div>
 
       </div>
 
-      <!-- =========================================
-           SECOND ROW
-      ========================================= -->
-
+      <!-- SECOND ROW -->
       <div class="form-row">
 
-        <!-- MOBILE -->
         <div class="form-group">
-
-          <label for="phone">
-            Mobile Number *
-          </label>
+          <label>Mobile Number *</label>
 
           <input
             type="tel"
-            id="phone"
             name="Mobile Number"
             placeholder="+91 XXXXXXXXXX"
             required
           >
-
         </div>
 
-        <!-- REQUIREMENT -->
         <div class="form-group">
 
-          <label for="requirement">
-            Requirement Type
-          </label>
+          <label>Requirement Type</label>
 
-          <select
-            id="requirement"
-            name="Requirement"
-          >
+          <select name="Requirement">
 
             <option value="">
               Select requirement type
@@ -2708,18 +2653,13 @@
 
       </div>
 
-      <!-- =========================================
-           MESSAGE
-      ========================================= -->
+      <!-- MESSAGE -->
 
       <div class="form-group">
 
-        <label for="message">
-          Hiring Requirement
-        </label>
+        <label>Hiring Requirement</label>
 
         <textarea
-          id="message"
           name="Message"
           placeholder="Tell us about your hiring requirements..."
           required
@@ -2727,9 +2667,7 @@
 
       </div>
 
-      <!-- =========================================
-           SUBMIT BUTTON
-      ========================================= -->
+      <!-- BUTTON -->
 
       <button
         type="submit"
@@ -2748,6 +2686,253 @@
 
 </section>
 
+<!-- =========================================
+     SUCCESS POPUP
+========================================= -->
+
+<div class="popup-overlay" id="successPopup">
+
+  <div class="popup-box">
+
+    <div class="popup-icon">
+      <i class="fas fa-check"></i>
+    </div>
+
+    <h2>Enquiry Submitted</h2>
+
+    <p>
+      Your enquiry has been submitted successfully.
+      Our team will contact you shortly.
+    </p>
+
+    <button onclick="closePopup()">
+      OK
+    </button>
+
+  </div>
+
+</div>
+
+<!-- =========================================
+     CSS
+========================================= -->
+
+<style>
+
+.contact-section{
+  padding:100px 0;
+  background:#f8fafc;
+}
+
+.contact-form-wrapper{
+  max-width:900px;
+  margin:auto;
+  background:#ffffff;
+  padding:50px;
+  border-radius:32px;
+  border:1px solid #e2e8f0;
+  box-shadow:0 20px 50px rgba(0,0,0,0.06);
+}
+
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.form-group label{
+  font-size:14px;
+  font-weight:600;
+  color:#0f172a;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  padding:16px 18px;
+  border:2px solid #e2e8f0;
+  border-radius:16px;
+  background:#ffffff;
+  font-size:15px;
+  transition:all .3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  outline:none;
+  border-color:#2563eb;
+  box-shadow:0 0 0 4px rgba(37,99,235,0.08);
+}
+
+.form-group textarea{
+  min-height:150px;
+}
+
+.submit-btn{
+  height:62px;
+  border:none;
+  border-radius:18px;
+  background:linear-gradient(135deg,#1e3a8a,#06b6d4);
+  color:#ffffff;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+}
+
+/* POPUP */
+
+.popup-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.5);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  visibility:hidden;
+  transition:0.3s;
+  z-index:9999;
+}
+
+.popup-overlay.active{
+  opacity:1;
+  visibility:visible;
+}
+
+.popup-box{
+  width:90%;
+  max-width:420px;
+  background:#ffffff;
+  border-radius:24px;
+  padding:40px;
+  text-align:center;
+}
+
+.popup-icon{
+  width:80px;
+  height:80px;
+  background:#dcfce7;
+  color:#16a34a;
+  margin:auto;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:34px;
+  margin-bottom:20px;
+}
+
+.popup-box h2{
+  margin-bottom:10px;
+  color:#0f172a;
+}
+
+.popup-box p{
+  color:#475569;
+  line-height:1.7;
+}
+
+.popup-box button{
+  margin-top:24px;
+  border:none;
+  background:#2563eb;
+  color:#fff;
+  padding:14px 30px;
+  border-radius:12px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+@media(max-width:768px){
+
+  .contact-section{
+    padding:70px 20px;
+  }
+
+  .contact-form-wrapper{
+    padding:32px;
+  }
+
+  .form-row{
+    grid-template-columns:1fr;
+  }
+
+}
+
+</style>
+
+<!-- =========================================
+     JAVASCRIPT
+========================================= -->
+
+<script>
+
+const form = document.getElementById("contactForm");
+const popup = document.getElementById("successPopup");
+
+form.addEventListener("submit", async function(e){
+
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  try{
+
+    const response = await fetch(
+      "https://api.web3forms.com/submit",
+      {
+        method:"POST",
+        body:formData
+      }
+    );
+
+    const result = await response.json();
+
+    if(result.success){
+
+      popup.classList.add("active");
+
+      form.reset();
+
+    }else{
+
+      alert("Something went wrong");
+
+    }
+
+  }catch(error){
+
+    alert("Error submitting form");
+
+  }
+
+});
+
+function closePopup(){
+
+  popup.classList.remove("active");
+
+}
+
+</script>
 <!-- =========================================
      CSS
 ========================================= -->
