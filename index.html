@@ -778,38 +778,50 @@ type="text"
 name="name"
 placeholder="Your Name"
 required
-class="input-field">
+class="input-field bg-gray-100 border border-gray-300">
 
 <input
 type="email"
 name="email"
 placeholder="Your Email"
 required
-class="input-field">
+class="input-field bg-gray-100 border border-gray-300">
 
 <input
 type="tel"
 name="phone"
 placeholder="Your Mobile Number"
 required
-class="input-field">
+class="input-field bg-gray-100 border border-gray-300">
 
 <textarea
 rows="6"
 name="message"
 placeholder="Tell us about your requirement..."
 required
-class="input-field"></textarea>
+class="input-field bg-gray-100 border border-gray-300"></textarea>
 
 <button
 type="submit"
-class="bg-white text-primary-600 py-4 rounded-2xl font-semibold hover:scale-105 transition">
+class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-4 rounded-2xl font-semibold hover:scale-105 transition shadow-lg">
 
 Send Message
 
 </button>
 
 </form>
+
+<script>
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", () => {
+
+alert("Thank you! Your message has been sent successfully.");
+
+});
+
+</script>
 
 <script>
 
