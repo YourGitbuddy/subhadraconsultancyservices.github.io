@@ -1,2 +1,1 @@
-
-console.log('Subhadra Consultancy Website Loaded');
+console.log('Enterprise HR Consultancy Website Loaded');
