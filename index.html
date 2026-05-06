@@ -2538,189 +2538,396 @@
      WORKING CONTACT FORM
 ========================================= -->
 
-<form 
-  class="contact-form"
-  action="https://formsubmit.co/subhadraconsultancy.services@gmail.com"
-  method="POST"
->
+<!-- =========================================
+     FONT AWESOME CDN
+========================================= -->
 
-  <!-- =========================================
-       FORMSUBMIT SETTINGS
-  ========================================= -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Disable Captcha -->
-  <input 
-    type="hidden" 
-    name="_captcha" 
-    value="false"
-  >
+<!-- =========================================
+     CONTACT FORM SECTION
+========================================= -->
 
-  <!-- Email Template -->
-  <input 
-    type="hidden" 
-    name="_template" 
-    value="table"
-  >
+<section class="contact-section">
 
-  <!-- Email Subject -->
-  <input 
-    type="hidden" 
-    name="_subject" 
-    value="New Business Enquiry - Subhadra Consultancy"
-  >
+  <div class="contact-form-wrapper">
 
-  <!-- Redirect URL -->
-  <input 
-    type="hidden" 
-    name="_next" 
-    value="https://subhadraconsultancy.in"
-  >
+    <!-- =========================================
+         WEB3FORMS CONTACT FORM
+    ========================================= -->
 
-  <!-- =========================================
-       FIRST ROW
-  ========================================= -->
+    <form 
+      action="https://api.web3forms.com/submit"
+      method="POST"
+      class="contact-form"
+    >
 
-  <div class="form-row">
+      <!-- =========================================
+           WEB3FORMS ACCESS KEY
+      ========================================= -->
 
-    <!-- COMPANY NAME -->
-    <div class="form-group">
-
-      <label for="company">
-        Company Name *
-      </label>
+      <!-- 
+        Replace YOUR_ACCESS_KEY_HERE 
+        with your real Web3Forms key
+      -->
 
       <input
-        type="text"
-        id="company"
-        name="Company Name"
-        placeholder="Your company name"
-        required
+        type="hidden"
+        name="access_key"
+        value="YOUR_ACCESS_KEY_HERE"
       >
 
-    </div>
-
-    <!-- EMAIL -->
-    <div class="form-group">
-
-      <label for="email">
-        Work Email *
-      </label>
+      <!-- =========================================
+           EMAIL SUBJECT
+      ========================================= -->
 
       <input
-        type="email"
-        id="email"
-        name="Work Email"
-        placeholder="you@company.com"
-        required
+        type="hidden"
+        name="subject"
+        value="New Business Enquiry - Subhadra Consultancy"
       >
 
-    </div>
+      <!-- =========================================
+           SUCCESS REDIRECT
+      ========================================= -->
+
+      <input
+        type="hidden"
+        name="redirect"
+        value="https://subhadraconsultancy.in"
+      >
+
+      <!-- =========================================
+           FIRST ROW
+      ========================================= -->
+
+      <div class="form-row">
+
+        <!-- COMPANY NAME -->
+        <div class="form-group">
+
+          <label for="company">
+            Company Name *
+          </label>
+
+          <input
+            type="text"
+            id="company"
+            name="Company Name"
+            placeholder="Your company name"
+            required
+          >
+
+        </div>
+
+        <!-- WORK EMAIL -->
+        <div class="form-group">
+
+          <label for="email">
+            Work Email *
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="Work Email"
+            placeholder="you@company.com"
+            required
+          >
+
+        </div>
+
+      </div>
+
+      <!-- =========================================
+           SECOND ROW
+      ========================================= -->
+
+      <div class="form-row">
+
+        <!-- MOBILE -->
+        <div class="form-group">
+
+          <label for="phone">
+            Mobile Number *
+          </label>
+
+          <input
+            type="tel"
+            id="phone"
+            name="Mobile Number"
+            placeholder="+91 XXXXXXXXXX"
+            required
+          >
+
+        </div>
+
+        <!-- REQUIREMENT -->
+        <div class="form-group">
+
+          <label for="requirement">
+            Requirement Type
+          </label>
+
+          <select
+            id="requirement"
+            name="Requirement"
+          >
+
+            <option value="">
+              Select requirement type
+            </option>
+
+            <option value="Permanent Hiring">
+              Permanent Hiring
+            </option>
+
+            <option value="Contract Staffing">
+              Contract Staffing
+            </option>
+
+            <option value="Bulk Hiring">
+              Bulk Hiring
+            </option>
+
+            <option value="Executive Search">
+              Executive Search
+            </option>
+
+            <option value="IT Recruitment">
+              IT Recruitment
+            </option>
+
+            <option value="HR Outsourcing">
+              HR Outsourcing
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+      <!-- =========================================
+           MESSAGE
+      ========================================= -->
+
+      <div class="form-group">
+
+        <label for="message">
+          Hiring Requirement
+        </label>
+
+        <textarea
+          id="message"
+          name="Message"
+          placeholder="Tell us about your hiring requirements..."
+          required
+        ></textarea>
+
+      </div>
+
+      <!-- =========================================
+           SUBMIT BUTTON
+      ========================================= -->
+
+      <button
+        type="submit"
+        class="submit-btn"
+      >
+
+        <i class="fas fa-paper-plane"></i>
+
+        Submit Enquiry
+
+      </button>
+
+    </form>
 
   </div>
 
-  <!-- =========================================
-       SECOND ROW
-  ========================================= -->
+</section>
 
-  <div class="form-row">
+<!-- =========================================
+     CSS
+========================================= -->
 
-    <!-- MOBILE -->
-    <div class="form-group">
+<style>
 
-      <label for="phone">
-        Mobile Number *
-      </label>
+/* =========================================
+   CONTACT SECTION
+========================================= */
 
-      <input
-        type="tel"
-        id="phone"
-        name="Mobile Number"
-        placeholder="+91 XXXXXXXXXX"
-        required
-      >
+.contact-section{
+  padding:100px 0;
+  background:#f8fafc;
+}
 
-    </div>
+/* =========================================
+   FORM WRAPPER
+========================================= */
 
-    <!-- REQUIREMENT -->
-    <div class="form-group">
+.contact-form-wrapper{
+  max-width:900px;
+  margin:auto;
+  background:#ffffff;
+  padding:50px;
+  border-radius:32px;
+  border:1px solid #e2e8f0;
+  box-shadow:0 20px 50px rgba(0,0,0,0.06);
+}
 
-      <label for="requirement">
-        Requirement Type
-      </label>
+/* =========================================
+   FORM
+========================================= */
 
-      <select
-        id="requirement"
-        name="Requirement"
-      >
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:24px;
+}
 
-        <option value="">
-          Select requirement type
-        </option>
+/* =========================================
+   ROW
+========================================= */
 
-        <option value="Permanent Hiring">
-          Permanent Hiring
-        </option>
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+}
 
-        <option value="Contract Staffing">
-          Contract Staffing
-        </option>
+/* =========================================
+   GROUP
+========================================= */
 
-        <option value="Bulk Hiring">
-          Bulk Hiring
-        </option>
+.form-group{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
 
-        <option value="Executive Search">
-          Executive Search
-        </option>
+/* =========================================
+   LABEL
+========================================= */
 
-        <option value="IT Recruitment">
-          IT Recruitment
-        </option>
+.form-group label{
+  font-size:14px;
+  font-weight:600;
+  color:#0f172a;
+}
 
-        <option value="HR Outsourcing">
-          HR Outsourcing
-        </option>
+/* =========================================
+   INPUTS
+========================================= */
 
-      </select>
+.form-group input,
+.form-group select,
+.form-group textarea{
+  width:100%;
+  padding:16px 18px;
+  border:2px solid #e2e8f0;
+  border-radius:16px;
+  background:#ffffff;
+  font-size:15px;
+  font-family:inherit;
+  transition:all .3s ease;
+}
 
-    </div>
+/* =========================================
+   FOCUS
+========================================= */
 
-  </div>
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+  outline:none;
+  border-color:#2563eb;
+  box-shadow:0 0 0 4px rgba(37,99,235,0.08);
+}
 
-  <!-- =========================================
-       MESSAGE
-  ========================================= -->
+/* =========================================
+   TEXTAREA
+========================================= */
 
-  <div class="form-group">
+.form-group textarea{
+  min-height:150px;
+  resize:vertical;
+}
 
-    <label for="message">
-      Hiring Requirement
-    </label>
+/* =========================================
+   BUTTON
+========================================= */
 
-    <textarea
-      id="message"
-      name="Hiring Requirement"
-      placeholder="Tell us about your hiring requirements..."
-    ></textarea>
+.submit-btn{
+  height:62px;
+  border:none;
+  border-radius:18px;
+  background:linear-gradient(135deg,#1e3a8a,#06b6d4);
+  color:#ffffff;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  transition:all .3s ease;
+  box-shadow:0 15px 35px rgba(37,99,235,0.25);
+}
 
-  </div>
+.submit-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 20px 45px rgba(37,99,235,0.35);
+}
 
-  <!-- =========================================
-       SUBMIT BUTTON
-  ========================================= -->
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
 
-  <button 
-    type="submit"
-    class="submit-btn"
-  >
+@media(max-width:768px){
 
-    <i class="fas fa-paper-plane"></i>
+  .contact-section{
+    padding:70px 20px;
+  }
 
-    Submit Enquiry
+  .contact-form-wrapper{
+    padding:32px;
+  }
 
-  </button>
+  .form-row{
+    grid-template-columns:1fr;
+  }
 
-</form>
+}
+
+</style>
+
+<!-- =========================================
+     IMPORTANT
+========================================= -->
+
+<!--
+
+1. Go to:
+   https://web3forms.com
+
+2. Create FREE account
+
+3. Copy Access Key
+
+4. Replace:
+   YOUR_ACCESS_KEY_HERE
+
+5. Deploy on:
+   - Netlify
+   - Vercel
+   - GitHub Pages
+
+6. Done ✅
+
+-->
+
 
 <!-- =========================================
      CSS
