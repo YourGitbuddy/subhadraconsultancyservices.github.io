@@ -779,10 +779,8 @@ Get in touch for career guidance and job opportunities
 </p>
 
 </div>
-
- <!-- =========================================
- 
-  WORKING CONTACT FORM
+<!-- =========================================
+     WORKING CONTACT FORM
 ========================================= -->
 
 <!-- =========================================
@@ -792,37 +790,44 @@ Get in touch for career guidance and job opportunities
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <!-- =========================================
-     CONTACT FORM SECTION
+     CONTACT SECTION
 ========================================= -->
 
 <section class="contact-section">
 
   <div class="contact-form-wrapper">
 
-    <form 
+    <form
       id="contactForm"
-      action="https://api.web3forms.com/submit"
-      method="POST"
       class="contact-form"
+      action="https://formsubmit.co/subhadraconsultancy.services@gmail.com"
+      method="POST"
     >
 
-      <!-- WEB3FORMS KEY -->
-      <input
-        type="hidden"
-        name="access_key"
-        value="YOUR_ACCESS_KEY_HERE"
-      >
+      <!-- FORMSUBMIT SETTINGS -->
+
+      <input type="hidden" name="_captcha" value="false">
+
+      <input type="hidden" name="_template" value="table">
 
       <input
         type="hidden"
-        name="subject"
+        name="_subject"
         value="New Business Enquiry - Subhadra Consultancy"
       >
 
+      <input
+        type="hidden"
+        name="_next"
+        value="https://subhadraconsultancy.in"
+      >
+
       <!-- COMPANY -->
+
       <div class="form-row">
 
         <div class="form-group">
+
           <label>Company Name *</label>
 
           <input
@@ -831,9 +836,11 @@ Get in touch for career guidance and job opportunities
             placeholder="Your company name"
             required
           >
+
         </div>
 
         <div class="form-group">
+
           <label>Work Email *</label>
 
           <input
@@ -842,14 +849,17 @@ Get in touch for career guidance and job opportunities
             placeholder="you@company.com"
             required
           >
+
         </div>
 
       </div>
 
       <!-- SECOND ROW -->
+
       <div class="form-row">
 
         <div class="form-group">
+
           <label>Mobile Number *</label>
 
           <input
@@ -858,6 +868,7 @@ Get in touch for career guidance and job opportunities
             placeholder="+91 XXXXXXXXXX"
             required
           >
+
         </div>
 
         <div class="form-group">
@@ -904,7 +915,7 @@ Get in touch for career guidance and job opportunities
 
       <div class="form-group">
 
-        <label>Hiring Requirement</label>
+        <label>Hiring Requirement *</label>
 
         <textarea
           name="Message"
@@ -914,7 +925,7 @@ Get in touch for career guidance and job opportunities
 
       </div>
 
-      <!-- BUTTON -->
+      <!-- SUBMIT BUTTON -->
 
       <button
         type="submit"
@@ -926,6 +937,27 @@ Get in touch for career guidance and job opportunities
         Submit Enquiry
 
       </button>
+
+      <!-- CONTACT INFO -->
+
+      <div class="contact-extra-info">
+
+        <p>
+          <i class="fas fa-phone"></i>
+          +91 7030604676
+        </p>
+
+        <p>
+          <i class="fas fa-envelope"></i>
+          subhadraconsultancy.services@gmail.com
+        </p>
+
+        <p>
+          <i class="fas fa-globe"></i>
+          subhadraconsultancy.in
+        </p>
+
+      </div>
 
     </form>
 
@@ -942,7 +974,9 @@ Get in touch for career guidance and job opportunities
   <div class="popup-box">
 
     <div class="popup-icon">
+
       <i class="fas fa-check"></i>
+
     </div>
 
     <h2>Enquiry Submitted</h2>
@@ -959,7 +993,6 @@ Get in touch for career guidance and job opportunities
   </div>
 
 </div>
-
 <!-- =========================================
      CSS
 ========================================= -->
