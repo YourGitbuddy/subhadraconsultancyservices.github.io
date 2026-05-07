@@ -1811,17 +1811,26 @@ document.addEventListener("DOMContentLoaded", function(){
         </p>
 
       </div>
+<!-- FONT AWESOME CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 <!-- HORIZONTAL LANDSCAPE CARD -->
 
 <div class="fresher-landscape-card">
 
   <div class="fresher-left">
 
+    <!-- ICON -->
+
     <div class="solution-icon">
       <i class="fas fa-graduation-cap"></i>
     </div>
 
+    <!-- TITLE -->
+
     <h3>Empowering Freshers Into Professionals</h3>
+
+    <!-- DESCRIPTION -->
 
     <p>
       Training, guidance, and placement support for freshers and
@@ -1856,14 +1865,86 @@ document.addEventListener("DOMContentLoaded", function(){
 
 <style>
 
-/* HORIZONTAL LANDSCAPE CARD */
+<!-- FONT AWESOME CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- HORIZONTAL LANDSCAPE CARD -->
+
+<div class="fresher-wrapper">
+
+  <div class="fresher-landscape-card">
+
+    <div class="fresher-left">
+
+      <!-- ICON -->
+
+      <div class="solution-icon">
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+
+      <!-- TITLE -->
+
+      <h3>Empowering Freshers Into Professionals</h3>
+
+      <!-- DESCRIPTION -->
+
+      <p>
+        Training, guidance, and placement support for freshers and
+        job seekers. We train, we guide, and we place candidates
+        into the right career opportunities.
+      </p>
+
+      <!-- TAGS -->
+
+      <div class="fresher-tags">
+
+        <span>
+          <i class="fas fa-chalkboard-teacher"></i>
+          Training
+        </span>
+
+        <span>
+          <i class="fas fa-user-check"></i>
+          Guidance
+        </span>
+
+        <span>
+          <i class="fas fa-briefcase"></i>
+          Placement
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<style>
+
+/* FULL WIDTH WRAPPER */
+
+.fresher-wrapper{
+width:100%;
+padding:0 20px;
+margin-top:50px;
+box-sizing:border-box;
+}
+
+/* LANDSCAPE CARD */
 
 .fresher-landscape-card{
 background:#ffffff;
 
-width:250%;
+/* RESPONSIVE WIDTH */
+width:100%;
+max-width:1700px;
 
-height:380px;
+margin:auto;
+
+/* HORIZONTAL LOOK */
+min-height:320px;
 
 display:flex;
 justify-content:center;
@@ -1875,7 +1956,7 @@ border-radius:30px;
 
 box-shadow:0 10px 40px rgba(0,0,0,0.06);
 
-margin-top:50px;
+box-sizing:border-box;
 }
 
 /* CENTER CONTENT */
@@ -1886,6 +1967,7 @@ flex-direction:column;
 align-items:center;
 justify-content:center;
 text-align:center;
+
 width:100%;
 }
 
@@ -1907,7 +1989,7 @@ color:#fff;
 font-size:36px;
 }
 
-/* SAME FONT SIZE AS OTHER CARDS */
+/* TITLE */
 
 .fresher-left h3{
 font-size:28px;
@@ -1916,11 +1998,13 @@ margin:25px 0 18px;
 color:#0f172a;
 }
 
+/* DESCRIPTION */
+
 .fresher-left p{
 font-size:17px;
 line-height:1.9;
 color:#64748b;
-max-width:900px;
+max-width:1000px;
 }
 
 /* TAGS */
@@ -1930,12 +2014,14 @@ display:flex;
 flex-wrap:wrap;
 justify-content:center;
 gap:16px;
+
 margin-top:30px;
 }
 
 .fresher-tags span{
 display:flex;
 align-items:center;
+justify-content:center;
 gap:10px;
 
 background:#eff6ff;
@@ -1954,13 +2040,50 @@ color:#2563eb;
 font-size:16px;
 }
 
-/* MOBILE */
+/* MOBILE RESPONSIVE */
 
 @media(max-width:991px){
 
+.fresher-wrapper{
+padding:0 12px;
+}
+
 .fresher-landscape-card{
-height:auto;
-padding:40px 30px;
+width:100%;
+max-width:100%;
+
+min-height:auto;
+
+padding:35px 20px;
+
+border-radius:24px;
+}
+
+.solution-icon{
+width:80px;
+height:80px;
+font-size:32px;
+}
+
+.fresher-left h3{
+font-size:24px;
+line-height:1.4;
+}
+
+.fresher-left p{
+font-size:16px;
+line-height:1.8;
+max-width:100%;
+}
+
+.fresher-tags{
+gap:12px;
+}
+
+.fresher-tags span{
+width:100%;
+padding:12px 18px;
+font-size:15px;
 }
 
 }
