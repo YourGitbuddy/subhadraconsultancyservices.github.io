@@ -1861,12 +1861,12 @@ document.addEventListener("DOMContentLoaded", function(){
 .fresher-landscape-card{
 background:#ffffff;
 
-width:210%;
+width:200%;
 
-/* LANDSCAPE SIZE */
 height:320px;
 
 display:flex;
+justify-content:center;
 align-items:center;
 
 padding:50px 70px;
@@ -1876,6 +1876,35 @@ border-radius:30px;
 box-shadow:0 10px 40px rgba(0,0,0,0.06);
 
 margin-top:50px;
+}
+
+/* CENTER CONTENT */
+
+.fresher-left{
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+width:100%;
+}
+
+/* ICON */
+
+.solution-icon{
+width:90px;
+height:90px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+background:linear-gradient(135deg,#2563eb,#06b6d4);
+
+border-radius:24px;
+
+color:#fff;
+font-size:36px;
 }
 
 /* SAME FONT SIZE AS OTHER CARDS */
@@ -1891,7 +1920,7 @@ color:#0f172a;
 font-size:17px;
 line-height:1.9;
 color:#64748b;
-max-width:1000px;
+max-width:900px;
 }
 
 /* TAGS */
@@ -1899,6 +1928,7 @@ max-width:1000px;
 .fresher-tags{
 display:flex;
 flex-wrap:wrap;
+justify-content:center;
 gap:16px;
 margin-top:30px;
 }
@@ -1936,7 +1966,6 @@ padding:40px 30px;
 }
 
 </style>
-
     </div>
 
   </div>
